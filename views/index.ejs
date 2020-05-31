@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+<style>
+    .navlist{
+        color:black;
+        font-size: 25px;;
+    }
+
+    .jumbotron{
+      margin-bottom: 0;
+    }
+
+    .jumbotron h1{
+        color: white;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .jumbotron h2{
+        color: white;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .about{
+      margin-top: 20px;
+    }
+    .about h5{
+      font-weight: lighter;
+    }
+
+    .jumbotron .sp{
+      border-color: #fff;
+      border-top:solid 0.25rem;
+      max-width: 15rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+
+    .about{
+      margin-bottom: 50px;
+    }
+    .skills i{
+      padding-top: 30px;
+    }
+
+    .project{
+      margin-top: 50px;
+    }
+
+    input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            }
+
+            input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+
+            .contact{
+                margin: 30px;
+            }
+
+            .site-footer
+              {
+                margin-top: 0;
+                background-color:#26272b;
+                padding:45px 0 20px;
+                font-size:15px;
+                line-height:24px;
+                color:#737373;
+              }
+              .site-footer hr
+              {
+                border-top-color:#bbb;
+                opacity:0.5
+              }
+              .site-footer hr.small
+              {
+                margin:20px 0
+              }
+              .site-footer h6
+              {
+                color:#fff;
+                font-size:16px;
+                text-transform:uppercase;
+                margin-top:5px;
+                letter-spacing:2px
+              }
+              .site-footer a
+              {
+                color:#737373;
+              }
+              .site-footer a:hover
+              {
+                color:#3366cc;
+                text-decoration:none;
+              }
+              .footer-links
+              {
+                padding-left:0;
+                list-style:none
+              }
+              .footer-links li
+              {
+                display:block
+              }
+              .footer-links a
+              {
+                color:#737373
+              }
+              .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+              {
+                color:#3366cc;
+                text-decoration:none;
+              }
+              .footer-links.inline li
+              {
+                display:inline-block
+              }
+              .site-footer .social-icons
+              {
+                text-align:right
+              }
+              .site-footer .social-icons a
+              {
+                width:40px;
+                height:40px;
+                line-height:40px;
+                margin-left:6px;
+                margin-right:0;
+                border-radius:100%;
+                background-color:#33353d
+              }
+              .copyright-text
+              {
+                margin:0
+              }
+              @media (max-width:991px)
+              {
+                .site-footer [class^=col-]
+                {
+                  margin-bottom:30px
+                }
+              }
+              @media (max-width:767px)
+              {
+                .site-footer
+                {
+                  padding-bottom:0
+                }
+                .site-footer .copyright-text,.site-footer .social-icons
+                {
+                  text-align:center
+                }
+              }
+              .social-icons
+              {
+                padding-left:0;
+                margin-bottom:0;
+                list-style:none
+              }
+              .social-icons li
+              {
+                display:inline-block;
+                margin-bottom:4px
+              }
+              .social-icons li.title
+              {
+                margin-right:15px;
+                text-transform:uppercase;
+                color:#96a2b2;
+                font-weight:700;
+                font-size:13px
+              }
+              .social-icons a{
+                background-color:#eceeef;
+                color:#818a91;
+                font-size:16px;
+                display:inline-block;
+                line-height:44px;
+                width:44px;
+                height:44px;
+                text-align:center;
+                margin-right:8px;
+                border-radius:100%;
+                -webkit-transition:all .2s linear;
+                -o-transition:all .2s linear;
+                transition:all .2s linear
+              }
+              .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+              {
+                color:#fff;
+                background-color:#29aafe
+              }
+              .social-icons.size-sm a
+              {
+                line-height:34px;
+                height:34px;
+                width:34px;
+                font-size:14px
+              }
+              .social-icons a.facebook:hover
+              {
+                background-color:#3b5998
+              }
+              .social-icons a.twitter:hover
+              {
+                background-color:#00aced
+              }
+              .social-icons a.linkedin:hover
+              {
+                background-color:#007bb6
+              }
+              .social-icons a.dribbble:hover
+              {
+                background-color:#ea4c89
+              }
+              @media (max-width:767px)
+              {
+                .social-icons li.title
+                {
+                  display:block;
+                  margin-right:0;
+                  font-weight:600
+                }
+              }
+
+
+
+</style>
+</head>
+<body>
+    
+    <div class="header">
+        <!--  NavBar  -->
+        
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="border-bottom:2px solid black;">
+          <div class="container">
+            <h1 style="color: black;"><a href="#">Ayush</a></h1>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link py-3 px-0 px-lg-3" href="#about"><span class="navlist">About me</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-3 px-0 px-lg-3" href="#skills"><span class="navlist">Skills</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-3 px-0 px-lg-3" href="#project"><span class="navlist">Projects</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-3 px-0 px-lg-3" href="#contact"><span class="navlist">Contact</span></a>
+              </li>
+                
+            </ul>
+          </div>
+        </div>
+        </nav>
+        
+        </div>
+
+        <!-- Profile image -->
+        <div class="jumbotron jumbotron-fluid bg-primary">
+              <img class="img-fluid mb-5 d-block mx-auto rounded-circle" height="300px" width="300px" src="images/profile.jpg" alt="">
+              <center><h1 class="mb-0">Ayush Srivastava</h1></center>
+              <hr class="sp" style="background-color: white;">
+              <center><h2 class="font-weight-light mb-0" style="color: white;">Full Stack Developer</h3></center>
+            </div>
+          
+        
+        <!--  About me -->
+            <div class="about" id="about">
+              <div class="container">
+              <center><h1 class="mb-0">About Me</h1></center>
+              <hr class="sp" style="background-color: white;">
+              <center><h5>Hello ,I'm Ayush Srivastava and I am from Prayagraj,Uttar Pradesh,India.</h5>
+                      <h5>I am currently pursuing B-Tech from Jaypee University of Engineering and Technology<br>Guna,Madhya Pradesh</h5>
+                      <h5>I am a programmer,full stack web developer</h5>
+                      <h5>Enthusiastic , eager to contribute to team , success through hard work.<br>Motivated to learn, grow .</h5>
+                      <h5> Good Communicator and Planner with strong judgmental and critical thinking abilities.</h5>
+                      <hr>
+                      <a class="btn btn-xl btn-outline-dark" target="blank" href="https://drive.google.com/file/d/1cQ5nVKv2Wbbd5UCsCyz9PJIsB80dimr0/view?usp=sharing">
+                        <i class="fas fa-download mr-2"></i>
+                        My Resume
+                      </a>
+                      </center>
+                    </div>
+          </div>
+
+
+          <!-- Skills-->
+          <div class="skills" id="skills">
+          <div class="jumbotron jumbotron-fluid bg-primary">
+            <div class="container">
+            <center><h1 class="mb-0">My Skills</h1></center>
+            <hr class="sp" style="background-color: white;">
+            <br>
+            <div class="container cf">
+              <span>
+                <i class="devicon-c-plain colored" style="font-size:120px; padding: 4%;"></i>
+                <i class="devicon-cplusplus-plain-wordmark colored" style="font-size:120px;padding: 4%;"></i>
+              <i class="devicon-python-plain-wordmark" style="font-size:120px; padding: 4%;"></i>
+              <i class="devicon-django-line colored" style="font-size:120px; padding: 4%;"></i>
+                <i class="devicon-html5-plain-wordmark colored" style="font-size:120px; padding: 4%;"></i>
+                <hr>
+                <i class="devicon-css3-plain-wordmark" style="font-size:120px; padding: 4%;"></i>
+                <i class="devicon-javascript-plain colored" style="font-size:120px; padding: 4%;"></i>
+              <i class="devicon-nodejs-plain-wordmark colored" style="font-size:120px; padding: 4%;"></i>
+              <i class="devicon-express-original-wordmark colored" style="font-size:120px; padding: 4%;"></i>
+              <i class="devicon-mongodb-plain-wordmark colored" style="font-size:120px; padding: 4%;"></i>
+              <hr>
+              <center><i class="devicon-react-original colored" style="font-size:120px; padding: 4%;"></i></center>
+              <i class="devicon-express"></i>
+            </span>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+
+
+        <!--Project-->
+        <div class="project" id="project">
+          <div class="container">
+          <center><h1 class="mb-0">Projects</h1></center>
+          <hr class="sp" style="background-color: white;">
+            
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item ">
+                <img src="/images/primep.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/primepp.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/primeppp.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/conjuet.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item active">
+                <img src="/images/conjuett.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <br>
+            <center>
+            <h3>1st Project:- <a target="blank" href="http://primepizza.herokuapp.com">Prime Pizza</a></h3>
+            <br>
+            <h3>2nd Project:- <a target="blank" href="http://conjuet.herokuapp.com">Connecting juet</a></h3>
+          </center>
+          </div>
+
+          </div>
+      </div>
+    
+      <br>
+      <!--Contact Us-->
+      <div class="jumbotron jumbotron-fluid bg-primary">
+        <div class="container">
+      <div class="contact" id="contact">
+        <center><h2 class="mb-0">Contact Me</h2></center>
+        <hr class="sp" style="background-color: white;">
+            
+                
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+            </div>
+          </div>
+
+
+          <!--Footer-->
+          <footer class="site-footer">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved 
+               <b>Ayush Srivastava</b>
+                  </p>
+                </div>
+      
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="social-icons">
+                    <li><a class="facebook" target="blank" href="https://www.facebook.com/1ayush1/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="github"  target="blank" href="https://github.com/ayushh01"><i class="fa fa-github"></i></a></li>
+                    <li><a class="linkedin" target="blank" href="https://www.linkedin.com/in/ayush-srivastava-411093163/"><i class="fa fa-linkedin"></i></a></li>   
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </footer>
+
+      <script src="https://kit.fontawesome.com/c59e4d7b3d.js" crossorigin="anonymous"></script>  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
